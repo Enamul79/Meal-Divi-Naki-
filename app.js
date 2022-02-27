@@ -34,11 +34,13 @@ const displaySearchResult = meals =>{
    const searchResult = document.getElementById('search-result');
    // searchResult.innerHTML = '';//not recommanded
    searchResult.textContent = '';//recommanded
+   // error handling
    if(meals.length === 0){
       console.log('No result found');
    }else{
       console.log('fine');
    }
+   
    meals.forEach(meal =>{
    // console.log(meal);
    
