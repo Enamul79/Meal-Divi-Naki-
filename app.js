@@ -71,6 +71,7 @@ const loadMealDetails = idMeal =>{
 const displayMealDetails = meal =>{
    console.log(meal);
    const mealDetails = document.getElementById('meal-details');
+   mealDetails.textContent = ''; // empty section
    const div = document.createElement('div');
    div.classList.add('card');
    div.innerHTML =`
