@@ -1,22 +1,44 @@
 const searchfood = () =>{
    const searchField = document.getElementById('search-field');
    const searchText = searchField.value;
-   // console.log(searchText);
+   // error handling
+   if(searchText == ''){
+      console.log('please write something to display');
+   }else{
+      // console.log(searchText);
    searchField.value = '';
+   // loadDataSection
    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
    // console.log(url);
    fetch(url)
       .then(response => response.json())
       .then(data => displaySearchResult(data.meals))
-
 }
 // searchfood();
+   }
+//    // console.log(searchText);
+//    searchField.value = '';
+//    // loadDataSection
+//    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
+//    // console.log(url);
+//    fetch(url)
+//       .then(response => response.json())
+//       .then(data => displaySearchResult(data.meals))
+
+// }
+// // searchfood();
 
 const displaySearchResult = meals =>{
    // console.log(meals);
    
    const searchResult = document.getElementById('search-result');
-   searchResult.innerHTML = '';
+   // searchResult.innerHTML = '';//not recommanded
+   searchResult.textContent = '';//recommanded
+   if(meals.length === 0){
+      console.log('No result found');
+   }else{
+      console.log('fine');
+   }
    meals.forEach(meal =>{
    // console.log(meal);
    
