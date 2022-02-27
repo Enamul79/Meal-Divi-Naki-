@@ -14,11 +14,14 @@ const searchfood = () =>{
 
 const displaySearchResult = meals =>{
    // console.log(meals);
-   const searchResult = document.getElementById('search-result')
+   
+   const searchResult = document.getElementById('search-result');
+   
    meals.forEach(meal =>{
-      ;
-      console.log(meal);
+   console.log(meal);
+   
    const div = document.createElement('div');
+   div.innerText = '';
    div.classList.add('col');
    div.innerHTML = `
      <div class="card h-100">
@@ -31,6 +34,11 @@ const displaySearchResult = meals =>{
       </div>
     </div>
    `;
+  
    searchResult.appendChild(div);
+   
+   
    })
+ 
 }
+ 
