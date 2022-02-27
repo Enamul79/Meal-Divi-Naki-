@@ -16,12 +16,12 @@ const displaySearchResult = meals =>{
    // console.log(meals);
    
    const searchResult = document.getElementById('search-result');
-   
+   searchResult.innerHTML = '';
    meals.forEach(meal =>{
    console.log(meal);
    
    const div = document.createElement('div');
-   div.innerText = '';
+  
    div.classList.add('col');
    div.innerHTML = `
      <div class="card h-100">
